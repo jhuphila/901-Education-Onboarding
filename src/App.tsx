@@ -1,4 +1,5 @@
 import TeamList from "./TeamList";
+import { getTeamStatus } from "./getTeamStatus";
 
 function App() {
   const teams = [
@@ -14,7 +15,7 @@ function App() {
     },
     {
       id: "3",
-      teamName: "Asian Students Association",
+      teamName: "Asian Student Association",
       school: "Drexel University",
     },
     {
@@ -28,6 +29,14 @@ function App() {
       school: "Drexel University",
     },
   ];
+
+  getTeamStatus("1").then((result) => {
+    console.log("Team 1:", result);
+  });
+
+  getTeamStatus("999").then((result) => {
+      console.log("Team 999:", result);
+  });
 
 
   return (
