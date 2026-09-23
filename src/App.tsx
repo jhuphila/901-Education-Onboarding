@@ -1,7 +1,7 @@
 import TeamList from "./TeamList";
 
 function App() {
-  const teams = [[
+  const teams = [
     {
       id: "1",
       teamName: "Hack4Impact",
